@@ -1,0 +1,21 @@
+.container {
+  padding: 20px 15px;
+}
+
+textarea {
+  height: 80px;
+}
+
+::ng-deep .mat-form-field-wrapper{
+  margin-bottom: -1.25em;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  border-radius: 23px;
+  background-color: #03DAC5;
+  float: right;
+}

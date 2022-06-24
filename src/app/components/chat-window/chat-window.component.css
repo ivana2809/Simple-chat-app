@@ -1,0 +1,20 @@
+mat-card {
+  height: 550px;
+}
+
+.container {
+  padding: 20px 15px;
+}
+
+mat-icon.bookmark {
+  color: #818284;
+}
+
+.button-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 23px;
+  background-color: #6200EE;
+  color: white;
+}
