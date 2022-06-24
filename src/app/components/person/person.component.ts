@@ -1,4 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {MessagingService} from '../../services/messaging.service';
+import {Message} from '../../interfaces/message';
 
 @Component({
   selector: 'app-person',
@@ -8,10 +11,23 @@ import {Component, Input, OnInit} from '@angular/core';
 export class PersonComponent implements OnInit {
 
   @Input() person: string;
+  public text = new FormControl('');
 
-  constructor() { }
+  constructor(
+    private messagingService: MessagingService
+  ) { }
 
   ngOnInit(): void {
+    console.log(this.person);
+  }
+
+  sendMessage(): void {
+    if (this.person && this.text.value.length > 0) {
+      const message: Message = {person: this.person, text: this.text.value};
+      this.messagingService.sendMessage(message);
+      this.text.reset();
+    }
+
   }
 
 }

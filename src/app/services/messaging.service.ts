@@ -6,9 +6,12 @@ import {Message} from '../interfaces/message';
 })
 export class MessagingService {
 
-  private messages: Message[];
+  private messages: Message[] = [];
 
   constructor() { }
 
-
+  sendMessage(message: Message): void {
+    this.messages.push(message);
+    console.log(this.messages);
+  }
 }

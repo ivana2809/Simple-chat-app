@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { ChatWindowComponent } from './components/chat-window/chat-window.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {MatListModule} from '@angular/material/list';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

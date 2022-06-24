@@ -2,10 +2,10 @@
 
   <mat-form-field class="my-form-field" appearance="outline">
     <mat-label>{{person}}</mat-label>
-    <textarea matInput placeholder="Enter your message here..."></textarea>
+    <textarea [formControl]="text" matInput placeholder="Enter your message here..."></textarea>
   </mat-form-field>
 
-  <button mat-raised-button>
+  <button [disabled]="text.value && text.value.length <= 0" mat-raised-button (click)="sendMessage()">
     <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right</mat-icon>
     SEND
   </button>
