@@ -4,7 +4,7 @@
 
   <div class="row">
     <h1 style="font-size: 2em">Simple Chat Application</h1>
-    <button mat-raised-button class="button-right">
+    <button [disabled]="persons.length > 8" mat-raised-button class="button-right" (click)="addPerson()">
       <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
       ADD NEW PERSON
     </button>
@@ -15,14 +15,9 @@
 
 <div class="left">
   <div class="wrapper">
-    <!-- TODO: obmedzit na 9 ludi-->
-    <app-person></app-person>
-    <app-person></app-person>
-    <app-person></app-person>
-    <app-person></app-person>
-    <app-person></app-person>
-    <app-person></app-person>
-    <app-person></app-person>
+    <ng-container *ngFor="let person of persons">
+      <app-person [person]="person"></app-person>
+    </ng-container>
   </div>
 </div>
 

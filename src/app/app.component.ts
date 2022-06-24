@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'chat-app';
+
+  public persons: string[] = [];
+
+  addPerson(): void {
+    if (this.persons.length < 9) {
+      this.persons.push('Person ' + (this.persons.length + 1).toString());
+    }
+  }
 }
