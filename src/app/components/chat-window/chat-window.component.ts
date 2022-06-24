@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MessagingService} from '../../services/messaging.service';
+import {Message} from '../../interfaces/message';
 
 @Component({
   selector: 'app-chat-window',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatWindowComponent implements OnInit {
 
-  constructor() { }
+  public messages: Message[];
+
+  constructor(
+    private messagingService: MessagingService
+  ) { }
 
   ngOnInit(): void {
+    this.messagingService.messages$.subscribe(messages => {
+      this.messages = messages;
+    });
   }
 
 }

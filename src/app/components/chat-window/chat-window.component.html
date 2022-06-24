@@ -4,10 +4,10 @@
   <mat-card class="example-card">
     <mat-card-content>
       <mat-list>
-        <mat-list-item>
+        <mat-list-item *ngFor="let message of messages">
           <mat-icon class="bookmark" mat-list-icon>bookmark</mat-icon>
-          <div mat-line>nuf</div>
-          <div mat-line>kasny</div>
+          <div mat-line>{{message.person}}</div>
+          <div mat-line>{{message.text}}</div>
           <mat-divider [inset]="true"></mat-divider>
         </mat-list-item>
       </mat-list>

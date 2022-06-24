@@ -17,9 +17,7 @@ export class PersonComponent implements OnInit {
     private messagingService: MessagingService
   ) { }
 
-  ngOnInit(): void {
-    console.log(this.person);
-  }
+  ngOnInit(): void {}
 
   sendMessage(): void {
     if (this.person && this.text.value.length > 0) {
