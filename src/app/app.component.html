@@ -1,10 +1,14 @@
 
 <div class="container">
-  <p class="row" style="font-size: 0.7em">Material Design</p>
+  <p class="row x-small">Material Design</p>
 
   <div class="row">
-    <h1 style="font-size: 2em">Simple Chat Application</h1>
-    <button [disabled]="persons.length > 8" mat-raised-button class="button-right" (click)="addPerson()">
+    <h1 class="xx-large">Simple Chat Application</h1>
+    <button
+        [disabled]="persons.length > 8"
+        mat-raised-button
+        class="button-right button-primary"
+        (click)="addPerson()">
       <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
       ADD NEW PERSON
     </button>

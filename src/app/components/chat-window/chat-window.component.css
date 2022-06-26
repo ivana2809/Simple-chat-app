@@ -1,22 +1,14 @@
 mat-card {
-  height: 550px;
-}
-
-.container {
-  padding: 20px 15px;
+  height: 520px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6) !important;
 }
 
 mat-icon.bookmark {
-  color: #818284;
+  color: var(--bookmark-symbol-color);
 }
 
-.button-right {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  border-radius: 23px;
-  background-color: #6200EE;
-  color: white;
+::ng-deep .mat-list .mat-list-item  {
+  height: initial !important;
 }
 
 ::ng-deep .mat-list .mat-list-item .mat-line {
@@ -24,11 +16,8 @@ mat-icon.bookmark {
   white-space: pre-wrap;
 }
 
-::ng-deep .mat-list .mat-list-item {
-  height: initial !important;
-}
-
-mat-list-item:last-child:before,
-mat-list-item:last-child:after {
-  margin: 20px;
+.button-right {
+  position: absolute !important;
+  right: 1em;
+  bottom: 0.5em;
 }

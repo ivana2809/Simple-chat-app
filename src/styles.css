@@ -1,4 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --primary-button-color: #6200EE;
+  --accent-button-color: #03DAC5;
+  --bookmark-symbol-color: #666666;
+}
+
+.container {
+  padding: 15px 25px;
+  position: relative;
+}
+
+button {
+  border-radius: 23px !important;
+}
+
+.button-primary {
+  background-color: var(--primary-button-color);
+  color: white;
+}
+
+.button-accent {
+  background-color: var(--accent-button-color);
+  color: black;
+}
+
+.x-small {
+  font-size: x-small;
+}
+
+.xx-large {
+  font-size: xx-large;
+}
+
+

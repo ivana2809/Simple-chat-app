@@ -5,7 +5,10 @@
     <textarea [formControl]="text" matInput placeholder="Enter your message here..."></textarea>
   </mat-form-field>
 
-  <button [disabled]="!text.value || (text.value && text.value.length <= 0)" mat-raised-button (click)="sendMessage()">
+  <button
+      [disabled]="!text.value || (text.value && text.value.length <= 0)"
+      mat-raised-button (click)="sendMessage()"
+      class="button-right button-accent">
     <mat-icon aria-hidden="false" aria-label="Example home icon">chevron_right</mat-icon>
     SEND
   </button>
