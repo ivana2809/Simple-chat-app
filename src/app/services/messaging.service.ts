@@ -20,4 +20,8 @@ export class MessagingService {
     tmpArray.push(message);
     this.messagesSubject.next(tmpArray);
   }
+
+  clearHistory(): void {
+    this.messagesSubject.next([]);
+  }
 }

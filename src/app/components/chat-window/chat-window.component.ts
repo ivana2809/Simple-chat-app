@@ -21,4 +21,8 @@ export class ChatWindowComponent implements OnInit {
     });
   }
 
+  clearHistory(): void {
+    this.messagingService.clearHistory();
+  }
+
 }
