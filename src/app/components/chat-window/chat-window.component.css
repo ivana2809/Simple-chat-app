@@ -1,19 +1,24 @@
 mat-card {
   height: 520px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5) !important;
 }
 
 mat-icon.bookmark {
   color: var(--bookmark-symbol-color);
 }
 
-::ng-deep .mat-list .mat-list-item  {
+::ng-deep .mat-list .mat-list-item {
   height: initial !important;
 }
 
 ::ng-deep .mat-list .mat-list-item .mat-line {
   word-wrap: break-word;
   white-space: pre-wrap;
+}
+
+::ng-deep .mat-list .mat-list-item .mat-list-text {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
 
 .button-right {
